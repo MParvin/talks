@@ -26,10 +26,13 @@
 
 فایل [`CNAME`](CNAME) همین مقدار را به GitHub Pages اعلام می‌کند.
 
-## پیش‌نمایش محلی
+## ساخت و پیش‌نمایش
+
+نیاز به [Task](https://taskfile.dev) (`task` یا روی فدورا `go-task`):
 
 ```bash
-python3 -m http.server 8765
-# http://localhost:8765
-# http://localhost:8765/vibe-coding/
+task build          # خروجی در public/
+task serve          # http://localhost:8765
 ```
+
+پوش روی `main` همان `task build` را در GitHub Actions اجرا می‌کند و `public/` را روی Pages منتشر می‌کند.

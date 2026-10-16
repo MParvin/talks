@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# https://taskfile.dev
+#
+# On Fedora the binary is usually `go-task`.
+# GitHub Actions uses `task` via arduino/setup-task.
+
+version: "3"
+
+vars:
+  PUBLIC: public
+  PORT: "8765"
+
+tasks:
+  default:
+    desc: List available tasks
+    cmds:
+      - "{{.TASK}} --list"
+    silent: true
+
+  build:
+    desc: Assemble the static site into public/ for GitHub Pages
+    cmds:
+      - rm -rf {{.PUBLIC}}
+      - mkdir -p {{.PUBLIC}}
+      - cp -a index.html CNAME .nojekyll {{.PUBLIC}}/
+      - |
+        for talk in */; do
+          case "$talk" in
+            public/|.git/|.github/) continue ;;
+          esac
+          cp -a "$talk" "{{.PUBLIC}}/"
+        done
+    sources:
+      - index.html
+      - CNAME
+      - .nojekyll
+      - "*/**"
+    generates:
+      - "{{.PUBLIC}}/**"
+
+  serve:
+    desc: Build and preview the site locally
+    deps: [build]
+    dir: "{{.PUBLIC}}"
+    cmds:
+      - echo "http://localhost:{{.PORT}}"
+      - python3 -m http.server {{.PORT}}
