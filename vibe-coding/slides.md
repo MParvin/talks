@@ -2,11 +2,11 @@
 
 # Open Source Tools for Vibe Coding
 
-<p class="subtitle">توسعهٔ هدایت‌شده با AI بدون دردسر</p>
+<p class="subtitle">از ایده تا کد، با ابزارهای آزاد</p>
 
 <hr class="brand-line" />
 
-<p class="presenter"><strong>محمد پروین</strong> · بنیانگذار پارس آپس و PaaS2</p>
+<p class="presenter"><strong>محمد پروین</strong> · بنیانگذار ParsOps و PaaS2</p>
 
 <div class="contacts">
   <a href="https://t.me/mdparvin" target="_blank" rel="noopener"><i class="fab fa-telegram"></i> @mdparvin</a>
@@ -122,7 +122,7 @@
 - خلاصه: مدل = مغز · <span class="latin">Harness</span> = بدن و فضای کار
 
 <div class="callout">
-  <p><span class="latin">Hermes Agent</span> یک <span class="latin">Harness</span> متن‌باز است</p>
+  <p><span class="latin">Hermes Agent</span> و <span class="latin">OpenClaw</span> هر دو <span class="latin">Harness</span> متن‌باز هستند</p>
 </div>
 
 ---
@@ -150,6 +150,21 @@
 
 <div class="callout success fragment">
   <p><strong>Local First:</strong> اجرا روی ماشین یا VPS شما — بدون تلمتری اجباری به سازنده؛ مدل می‌تواند محلی یا ابری باشد</p>
+</div>
+
+---
+
+## معرفی OpenClaw
+
+<span class="tag">OpenClaw Foundation</span>
+
+- Gateway خودمیزبان — ایجنت روی ماشین یا سرور شما
+- یک ایجنت، چند کانال: Telegram، Discord، Slack و پیام‌رسان‌های دیگر
+- هر مدل: ابری یا محلی؛ بدون سرویس واسط اجباری
+- حافظه، ابزار، مهارت و کار زمان‌بندی‌شده
+
+<div class="callout fragment">
+  <p>متن‌باز <span class="latin">MIT</span> — هارنس همه‌منظوره، نه فقط copilot داخل ادیتور</p>
 </div>
 
 ---
